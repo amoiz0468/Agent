@@ -81,9 +81,20 @@ The AI agent uses OpenAI's GPT model to generate responses based on user queries
 
 ## Challenges Faced
 
-- Ensuring smooth integration between the frontend and backend.
-- Managing conversation history to provide context-aware responses.
-- Handling API errors and providing meaningful feedback to the user.
+### Integration Between Frontend and Backend
+
+- **Challenge:** Ensuring smooth integration between the frontend and backend.
+- **Solution:** Used CORS middleware in the backend to handle cross-origin requests and ensured consistent API endpoints.
+
+### Managing Conversation History
+
+- **Challenge:** Maintaining conversation history to provide context-aware responses.
+- **Solution:** Stored conversation history in memory using JavaScript objects and passed the history along with each query to the OpenAI API.
+
+### Handling API Errors
+
+- **Challenge:** Handling API errors and providing meaningful feedback to the user.
+- **Solution:** Implemented error handling in the backend to catch and log errors, and provided user-friendly error messages in the frontend.
 
 ## Future Improvements
 
