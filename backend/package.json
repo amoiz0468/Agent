@@ -1,0 +1,15 @@
+{
+  "name": "chatbot-backend",
+  "version": "1.0.0",
+  "description": "Backend for AI-Powered Q&A Agent",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "openai": "^3.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0"
+  }
+}
