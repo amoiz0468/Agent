@@ -5,16 +5,19 @@
 ### Backend
 
 1. Navigate to the backend directory:
+
    ```sh
    cd backend
    ```
 
 2. Create a virtual environment:
+
    ```sh
    python -m venv venv
    ```
 
 3. Activate the virtual environment:
+
    - On Windows:
      ```sh
      venv\Scripts\activate
@@ -25,11 +28,13 @@
      ```
 
 4. Install dependencies:
+
    ```sh
    pip install -r requirements.txt
    ```
 
 5. Create a `.env` file in the backend directory and add your OpenAI API key:
+
    ```env
    OPENAI_API_KEY=your_openai_api_key_here
    ```
@@ -42,11 +47,13 @@
 ### Frontend
 
 1. Navigate to the frontend directory:
+
    ```sh
    cd frontend
    ```
 
 2. Install dependencies:
+
    ```sh
    npm install
    ```
@@ -64,8 +71,7 @@ Open your browser and navigate to `http://localhost:3000` to use the AI-Powered 
 
 ### Backend
 
-- FastAPI
-- Uvicorn
+- Flask
 - OpenAI
 - python-dotenv
 
@@ -81,7 +87,7 @@ The AI agent uses OpenAI's GPT model to generate responses based on user queries
 
 ### Backend
 
-- The backend is built using FastAPI.
+- The backend is built using Flask.
 - It provides an API endpoint `/api/query` to accept user queries.
 - The query is forwarded to the OpenAI GPT model, and the response is returned along with the conversation history.
 - The conversation history is stored in memory using Python dictionaries.
