@@ -9,19 +9,34 @@
    cd backend
    ```
 
-2. Install dependencies:
+2. Create a virtual environment:
    ```sh
-   npm install
+   python -m venv venv
    ```
 
-3. Create a `.env` file in the backend directory and add your OpenAI API key:
+3. Activate the virtual environment:
+   - On Windows:
+     ```sh
+     venv\Scripts\activate
+     ```
+   - On macOS/Linux:
+     ```sh
+     source venv/bin/activate
+     ```
+
+4. Install dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+5. Create a `.env` file in the backend directory and add your OpenAI API key:
    ```env
    OPENAI_API_KEY=your_openai_api_key_here
    ```
 
-4. Start the backend server:
+6. Start the backend server:
    ```sh
-   npm start
+   python app.py
    ```
 
 ### Frontend
@@ -49,11 +64,10 @@ Open your browser and navigate to `http://localhost:3000` to use the AI-Powered 
 
 ### Backend
 
-- Node.js
-- Express
+- FastAPI
+- Uvicorn
 - OpenAI
-- CORS
-- Dotenv
+- python-dotenv
 
 ### Frontend
 
@@ -67,10 +81,10 @@ The AI agent uses OpenAI's GPT model to generate responses based on user queries
 
 ### Backend
 
-- The backend is built using Node.js and Express.
+- The backend is built using FastAPI.
 - It provides an API endpoint `/api/query` to accept user queries.
 - The query is forwarded to the OpenAI GPT model, and the response is returned along with the conversation history.
-- The conversation history is stored in memory using JavaScript objects.
+- The conversation history is stored in memory using Python dictionaries.
 
 ### Frontend
 
@@ -89,7 +103,7 @@ The AI agent uses OpenAI's GPT model to generate responses based on user queries
 ### Managing Conversation History
 
 - **Challenge:** Maintaining conversation history to provide context-aware responses.
-- **Solution:** Stored conversation history in memory using JavaScript objects and passed the history along with each query to the OpenAI API.
+- **Solution:** Stored conversation history in memory using Python dictionaries and passed the history along with each query to the OpenAI API.
 
 ### Handling API Errors
 
